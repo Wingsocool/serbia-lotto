@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2196F3" />
+  <title>塞尔维亚 Loto 选号助手</title>
+  <meta name="description" content="塞尔维亚 Loto i LotoPlus 选号助手：自选、机选、保存历史、号码统计与收藏。" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>Loto i LotoPlus</h1>
+        <p>塞尔维亚 Loto 选号助手</p>
+      </div>
+      <span class="badge">7 / 39</span>
+    </header>
+
+    <main>
+      <section id="screen-home" class="screen active" aria-labelledby="home-title">
+        <h2 id="home-title" class="sr-only">选号</h2>
+
+        <section class="card selected-card">
+          <div class="selected-header">
+            <span>已选号码</span>
+            <strong id="selected-count">0/7</strong>
+          </div>
+          <div id="selected-numbers" class="selected-numbers empty">请选择 7 个号码</div>
+        </section>
+
+        <section class="card numbers-card">
+          <div id="number-grid" class="number-grid" aria-label="号码选择区"></div>
+        </section>
+
+        <section class="actions card">
+          <div class="action-row three">
+            <button id="random-btn" class="btn primary">机选</button>
+            <button id="clear-btn" class="btn danger-lite">清除</button>
+            <button id="save-btn" class="btn success">保存</button>
+          </div>
+          <div class="action-row two">
+            <button id="favorite-btn" class="btn purple">收藏</button>
+            <button id="share-btn" class="btn slate">分享</button>
+          </div>
+        </section>
+      </section>
+
+      <section id="screen-history" class="screen" aria-labelledby="history-title">
+        <div class="screen-title-row">
+          <div>
+            <h2 id="history-title">历史记录</h2>
+            <p>点击记录可重新使用这组号码</p>
+          </div>
+        </div>
+        <section class="card history-toolbar">
+          <button id="random-history-btn" class="btn primary">从历史随机</button>
+          <button id="clear-history-btn" class="btn danger">清空记录</button>
+        </section>
+        <section id="history-list" class="list-card"></section>
+      </section>
+
+      <section id="screen-stats" class="screen" aria-labelledby="stats-title">
+        <div class="screen-title-row">
+          <div>
+            <h2 id="stats-title">号码统计</h2>
+            <p id="stats-subtitle">共 0 条记录</p>
+          </div>
+        </div>
+        <section id="stats-grid" class="stats-grid card"></section>
+      </section>
+
+      <section id="screen-favorites" class="screen" aria-labelledby="favorites-title">
+        <div class="screen-title-row">
+          <div>
+            <h2 id="favorites-title">收藏号码</h2>
+            <p>点击收藏可重新使用这组号码</p>
+          </div>
+        </div>
+        <section id="favorites-list" class="list-card"></section>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="主导航">
+      <button class="nav-btn active" data-screen="home">选号</button>
+      <button class="nav-btn" data-screen="history">历史</button>
+      <button class="nav-btn" data-screen="stats">统计</button>
+      <button class="nav-btn" data-screen="favorites">收藏</button>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

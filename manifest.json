@@ -1,0 +1,15 @@
+{
+  "name": "塞尔维亚 Loto 选号助手",
+  "short_name": "Loto选号",
+  "description": "塞尔维亚 Loto i LotoPlus 选号助手",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f9fc",
+  "theme_color": "#2196F3",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "assets/icon.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any" },
+    { "src": "assets/adaptive-icon.png", "sizes": "1024x1024", "type": "image/png", "purpose": "maskable" }
+  ]
+}
